@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('GIT_Webhook') {
-            steps {
-                checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/im-sahiljain/Jenkins-Pipeline.git']])
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Compile and build your application...'
